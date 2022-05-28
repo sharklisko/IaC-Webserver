@@ -1,3 +1,7 @@
+# Do not repeat resource type in resource name.
+# We use this or default as a resource name if there is no specsification.
+# i.e. if you have 2 different resource "aws_elb" in your terraform file, you can specifiy the name, otherwise it will be good default or this
+# https://www.terraform-best-practices.com/naming#resource-and-data-source-arguments
 resource "aws_elb" "my-elb" {
   name            = "my-elb"
   subnets         = [aws_subnet.main-public-1.id]

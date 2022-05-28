@@ -3,6 +3,8 @@ resource "aws_eip" "nat" {
   vpc = true
 }
 
+# The same thing
+# https://www.terraform-best-practices.com/naming#resource-and-data-source-arguments
 resource "aws_nat_gateway" "nat-gw" {
   allocation_id = aws_eip.nat.id
   subnet_id     = aws_subnet.main-public-1.id

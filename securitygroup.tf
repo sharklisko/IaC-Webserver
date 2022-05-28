@@ -1,3 +1,5 @@
+# The same thing
+# https://www.terraform-best-practices.com/naming#resource-and-data-source-arguments
 resource "aws_security_group" "instance-securitygroup" {
   vpc_id      = aws_vpc.main.id
   name        = "instance"
@@ -27,6 +29,8 @@ resource "aws_security_group" "instance-securitygroup" {
   }
 }
 
+# The same thing
+# https://www.terraform-best-practices.com/naming#resource-and-data-source-arguments
 resource "aws_security_group" "elb-securitygroup" {
   vpc_id      = aws_vpc.main.id
   name        = "elb"

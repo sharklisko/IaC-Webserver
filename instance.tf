@@ -3,6 +3,8 @@ resource "aws_instance" "arasit" {
   instance_type = "t2.micro"
   subnet_id = aws_subnet.main-private-1.id
   vpc_security_group_ids = [aws_security_group.instance-securitygroup.id]
+  # You can use something like that
+  # user_data = "${file("install_nginx.sh")}"
   user_data = <<EOF
 #!/bin/bash
 apt-get update
