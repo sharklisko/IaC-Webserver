@@ -7,7 +7,7 @@ It needs to be run by entering pre-defined the name of Access Key ID and Secret 
 
 For instance with default;
 
-$ terraform plan
+$ terraform plan    
 var.profile
   AWS credentials profile you want to use
 
