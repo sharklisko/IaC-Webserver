@@ -1,7 +1,7 @@
-resource "aws_elb" "my-elb" {
-  name            = "my-elb"
+resource "aws_elb" "public" {
+  name            = "public"
   subnets         = [aws_subnet.main-public-1.id]
-  security_groups = [aws_security_group.elb-securitygroup.id]
+  security_groups = [aws_security_group.elb.id]
   listener {
     instance_port     = 80
     instance_protocol = "http"
@@ -20,11 +20,11 @@ resource "aws_elb" "my-elb" {
   connection_draining         = true
   connection_draining_timeout = 400
   tags = {
-    Name = "my-elb"
+    Name = "public"
   }
 }
 
 resource "aws_elb_attachment" "baz" {
-  elb      = aws_elb.my-elb.id
+  elb      = aws_elb.public.id
   instance = aws_instance.arasit.id
 }

@@ -1,7 +1,5 @@
-variable "AWS_ACCESS_KEY" {
-}
-
-variable "AWS_SECRET_KEY" {
+variable "profile" {
+    description = "AWS credentials profile you want to use"
 }
 
 variable "AWS_REGION" {

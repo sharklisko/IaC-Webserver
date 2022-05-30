@@ -1,4 +1,4 @@
-resource "aws_security_group" "instance-securitygroup" {
+resource "aws_security_group" "arasit" {
   vpc_id      = aws_vpc.main.id
   name        = "instance"
   description = "security group for instance"
@@ -19,15 +19,15 @@ resource "aws_security_group" "instance-securitygroup" {
     from_port       = 80
     to_port         = 80
     protocol        = "tcp"
-    security_groups = [aws_security_group.elb-securitygroup.id]
+    security_groups = [aws_security_group.elb.id]
   }
 
   tags = {
-    Name = "instance"
+    Name = "arasit"
   }
 }
 
-resource "aws_security_group" "elb-securitygroup" {
+resource "aws_security_group" "elb" {
   vpc_id      = aws_vpc.main.id
   name        = "elb"
   description = "security group for load balancer"
