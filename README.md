@@ -1,5 +1,5 @@
-# halid
-This project creates VPC, public and private subnet, nginx web server on ubuntu type EC2 instance in private subnet and elastic loadbalancer on AWS.
+# Iac - Webserver
+This project creates VPC, public and private subnet, nginx web server on ubuntu type EC2 instance in private subnet and elastic loadbalancer on AWS with Terraform.
 
 Access Key ID and Secret Access Key needs to be stored in "~/.aws/credentials"
 
